@@ -1,5 +1,7 @@
 package fstt.org.market.entities;
 
+import java.util.List;
+
 public class Orderline implements Cloneable{
 	
 	private Integer orderlineId;
@@ -22,6 +24,13 @@ public class Orderline implements Cloneable{
 		super();
 		this.orderlineQuantity = orderlineQuantity;
 		this.orderlineOrder = orderlineOrder;
+		this.orderlineProduct = orderlineProduct;
+	}
+
+	public Orderline(Integer orderlineId, int orderlineQuantity, Product orderlineProduct) {
+		super();
+		this.orderlineId = orderlineId;
+		this.orderlineQuantity = orderlineQuantity;
 		this.orderlineProduct = orderlineProduct;
 	}
 
@@ -60,7 +69,7 @@ public class Orderline implements Cloneable{
 	public void setOrderlineProduct(Product orderlineProduct) {
 		this.orderlineProduct = orderlineProduct;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Orderline [orderlineId=" + orderlineId + ", orderlineQuantity=" + orderlineQuantity

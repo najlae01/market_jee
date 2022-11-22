@@ -27,7 +27,8 @@ public class OrderlineDAO implements OrderlineRepository {
 	}
 
 	@Override
-	public void saveOrderline(Orderline orderline) throws SQLException {
+	public void saveOrderline(Orderline orderline) throws SQLException, ClassNotFoundException {
+		
 		String sql = "insert into orderline (orderline_quantity , orderline_order_id, orderline_product_id) values (? ,?, ?)";
 
 		this.preparedStatement = this.connexion.prepareStatement(sql);
@@ -37,6 +38,10 @@ public class OrderlineDAO implements OrderlineRepository {
 		this.preparedStatement.setInt(3, orderline.getOrderlineProduct().getProductId());
 		
 		this.preparedStatement.execute();
+		
+		OrderDAO orderDAO = new OrderDAO();
+		//Order order = orderDAO.findById(((ResultSet) this.preparedStatement).getInt(2));
+		//order.addOrderline(orderline);
 	}
 
 	@Override
@@ -112,6 +117,31 @@ public class OrderlineDAO implements OrderlineRepository {
 		}
 
 		return orderline;
+	}
+	
+	@Override
+	public ArrayList<Orderline> findAllByOrderId(Integer id) throws SQLException, ClassNotFoundException {
+		OrderDAO orderDAO = new OrderDAO();
+		ProductDAO productDAO = new ProductDAO();
+		String sql = "select * from orderline where orderline_order_id = ?";
+
+		ArrayList<Orderline> list = new ArrayList<Orderline>();
+
+		this.preparedStatement = this.connexion.prepareStatement(sql);
+
+		this.preparedStatement.setInt(1, id);
+
+		this.resultSet = this.preparedStatement.executeQuery();
+
+		while (this.resultSet.next()) {
+			//Order order = orderDAO.findById(this.resultSet.getInt(3));
+			//System.out.println(order);
+			Product product = productDAO.findById(this.resultSet.getInt(4));
+			System.out.println(product);
+			list.add(new Orderline(this.resultSet.getInt(1), this.resultSet.getInt(2), product));
+		}
+
+		return list;
 	}
 
 }

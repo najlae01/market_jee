@@ -12,6 +12,7 @@ import java.util.List;
 import fstt.org.market.connexion.ConnexionManager;
 import fstt.org.market.entities.Client;
 import fstt.org.market.entities.Order;
+import fstt.org.market.entities.Orderline;
 import fstt.org.market.service.OrderRepository;
 
 public class OrderDAO implements OrderRepository {
@@ -66,6 +67,9 @@ public class OrderDAO implements OrderRepository {
 	public List<Order> findAllOrder() throws SQLException, ClassNotFoundException {
 		ClientDAO clientDAO = new ClientDAO();
 		List<Order> list = new ArrayList<Order>();
+		
+		OrderlineDAO orderlineDAO = new OrderlineDAO();
+		
 		this.statement = this.connexion.createStatement();
 
 		this.resultSet = this.statement.executeQuery("select * from orderc ");
@@ -73,7 +77,8 @@ public class OrderDAO implements OrderRepository {
 		while (this.resultSet.next()) {
 			Client client = clientDAO.findById(this.resultSet.getInt(3));
 			System.out.println(client);
-			list.add(new Order(this.resultSet.getInt(1), this.resultSet.getDate(2), client));
+			ArrayList<Orderline> orderlines = orderlineDAO.findAllByOrderId(this.resultSet.getInt(1));
+			list.add(new Order(this.resultSet.getInt(1), this.resultSet.getDate(2), orderlines, client));
 		}
 
 		return list;
@@ -82,6 +87,8 @@ public class OrderDAO implements OrderRepository {
 	@Override
 	public Order findById(Integer id) throws SQLException, ClassNotFoundException {
 		ClientDAO clientDAO = new ClientDAO();
+		//TODO Fetch orderlines associated with orderId
+		OrderlineDAO orderlineDAO = new OrderlineDAO();
 		String sql = "select * from orderc where order_id = ?";
 
 		Order order = null;
@@ -95,7 +102,8 @@ public class OrderDAO implements OrderRepository {
 		while (this.resultSet.next()) {
 			Client client = clientDAO.findById(this.resultSet.getInt(3));
 			System.out.println(client);
-			order = new Order(this.resultSet.getInt(1), this.resultSet.getDate(2), client);
+			ArrayList<Orderline> orderlines = orderlineDAO.findAllByOrderId(id);
+			order = new Order(this.resultSet.getInt(1), this.resultSet.getDate(2), orderlines, client);
 
 			break;
 

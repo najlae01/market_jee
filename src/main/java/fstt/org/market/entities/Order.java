@@ -1,6 +1,8 @@
 package fstt.org.market.entities;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Order  implements Cloneable{
 	
@@ -9,18 +11,29 @@ public class Order  implements Cloneable{
 	private Date orderDate;
 	
 	private Client client;
+	
+	private ArrayList<Orderline> orderlines;
 
 	public Order(Integer orderId, Client client) {
 		super();
 		this.orderId = orderId;
 		this.orderDate = new Date();
+		this.orderlines = new ArrayList<Orderline>();
 		this.client = client;
 	}
-
+	
 	public Order(Integer orderId, Date orderDate, Client client) {
 		super();
 		this.orderId = orderId;
 		this.orderDate = orderDate;
+		this.client = client;
+	}
+
+	public Order(Integer orderId, Date orderDate, ArrayList<Orderline> orderlines,  Client client) {
+		super();
+		this.orderId = orderId;
+		this.orderDate = orderDate;
+		this.orderlines = orderlines;
 		this.client = client;
 	}
 
@@ -58,10 +71,23 @@ public class Order  implements Cloneable{
 		this.client = client;
 	}
 
+	public ArrayList<Orderline> getOrderlines() {
+		return orderlines;
+	}
+
+	public void setOrderlines(ArrayList<Orderline> orderlines) {
+		this.orderlines = orderlines;
+	}
+	
+	public void addOrderline(Orderline orderline) {
+		this.orderlines.add(orderline);
+	}
+
 	@Override
 	public String toString() {
 		return "Order [orderId=" + orderId + ", orderDate=" + orderDate + ", client=" + client + "]";
 	}
+	
 	
 	
 }
