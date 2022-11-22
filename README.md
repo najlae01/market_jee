@@ -11,7 +11,7 @@ Mini Market Application Based on MVC1 and Standard JEE
 
     ## Adding a client to the database :
   
-  <img align="left" width="1000px" src="readme_images/add_client1.png" />
+  <img align="left" width="1000px" src="readme-images/add_client1.png" />
   
     ## Listing clients :
   
