@@ -1,0 +1,7 @@
+fstt\org\market\entities\Client.class
+fstt\org\market\connexion\ConnexionManager.class
+fstt\org\market\controllers\client\SaveClientController.class
+fstt\org\market\controllers\client\ListClientController.class
+fstt\org\market\dao\ClientDAO.class
+fstt\org\market\service\ClientRepository.class
+fstt\org\market\connexion\Test.class
