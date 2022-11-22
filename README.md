@@ -5,7 +5,7 @@ Mini Market Application Based on MVC1 and Standard JEE
   
   <img align="left" alt="UML Diagram" width="1000px" src="readme-images/market_classDiagram.png" />
   
-  ## Database Design :
+   ## Database Design :
   
   <img align="left" alt="Database Design" width="1000px" src="readme-images/db_design.png" />
 
