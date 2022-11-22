@@ -47,42 +47,42 @@ Mini Market Application Based on MVC1 and Standard JEE
   
    ## Updating the product :
   
-    <img align="left" width="1000px" src="readme-images/update_product1.png" />
+   <img align="left" width="1000px" src="readme-images/update_product1.png" />
   
-    ## Listing products :
-      Product is updated.
-    <img align="left" width="1000px" src="readme-images/product_updated1.png" />
+   ## Listing products :
+   Product is updated.
+   <img align="left" width="1000px" src="readme-images/product_updated1.png" />
   
-    ## Adding another product to the database :
+   ## Adding another product to the database :
   
-    <img align="left" width="1000px" src="readme-images/add_product2.png" />
+   <img align="left" width="1000px" src="readme-images/add_product2.png" />
   
-    ## Listing products :
+   ## Listing products :
   
-    <img align="left" width="1000px" src="readme-images/list_products2.png" />
+   <img align="left" width="1000px" src="readme-images/list_products2.png" />
   
-    ## Adding a third product to the database :
+   ## Adding a third product to the database :
   
-    <img align="left" width="1000px" src="readme-images/add_product3.png" />
+   <img align="left" width="1000px" src="readme-images/add_product3.png" />
   
-    ## Listing products :
+   ## Listing products :
   
-    <img align="left" width="1000px" src="readme-images/list_products3.png" />
+   <img align="left" width="1000px" src="readme-images/list_products3.png" />
   
-    ## Deleting the first product :
+   ## Deleting the first product :
   
-    <img align="left" width="1000px" src="readme-images/delete_product1.png" />
+   <img align="left" width="1000px" src="readme-images/delete_product1.png" />
   
-    ## Adding another client to the database :
+   ## Adding another client to the database :
   
-    <img align="left" width="1000px" src="readme-images/add_client3.png" />
+   <img align="left" width="1000px" src="readme-images/add_client3.png" />
   
-    ## Adding an order to the database :
-      Available clients in the database are listed in the select tag.
+   ## Adding an order to the database :
+   Available clients in the database are listed in the select tag.
     <img align="left" width="1000px" src="readme-images/add_order1_clients_list.png" />
       <img align="left" width="1000px" src="readme-images/add_order1.png" />
     
-    ## Listing orders :
+   ## Listing orders :
   
    <img align="left" width="1000px" src="readme-images/list_orders1.png" />
   
@@ -94,11 +94,11 @@ Mini Market Application Based on MVC1 and Standard JEE
    
    <img align="left" width="1000px" src="readme-images/add_orderline1.png" />
     
-    ## Listing orderlines :
+   ## Listing orderlines :
   
    <img align="left" width="1000px" src="readme-images/list_orderlines1.png" />
   
-    ## Listing orders after adding the first orderline associated with the order with Id 7:
+   ## Listing orders after adding the first orderline associated with the order with Id 7:
   
   <img align="left" width="1000px" src="readme-images/list_orders3_orderline1_added.png" />
   
