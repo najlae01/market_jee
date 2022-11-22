@@ -9,41 +9,41 @@ Mini Market Application Based on MVC1 and Standard JEE
   
   <img align="left" alt="Database Design" width="1000px" src="readme-images/db_design.png" />
 
-    ## Adding a client to the database :
+  ## Adding a client to the database :
   
-    <img align="left" width="1000px" src="readme-images/add_client1.png" />
+  <img align="left" width="1000px" src="readme-images/add_client1.png" />
   
-    ## Listing clients :
+  ## Listing clients :
   
-    <img align="left" width="1000px" src="readme-images/list_clients1.png" />
+  <img align="left" width="1000px" src="readme-images/list_clients1.png" />
   
-    ## Updating the client :
+  ## Updating the client :
   
-    <img align="left" width="1000px" src="readme-images/update_client1.png" />
+  <img align="left" width="1000px" src="readme-images/update_client1.png" />
   
-    ## Listing clients :
-      Client is updated.
-    <img align="left" width="1000px" src="readme-images/client_updated1.png" />
+  ## Listing clients :
+   Client is updated.
+  <img align="left" width="1000px" src="readme-images/client_updated1.png" />
   
-    ## Adding another client to the database :
+  ## Adding another client to the database :
   
-    <img align="left" width="1000px" src="readme-images/add_client2.png" />
+  <img align="left" width="1000px" src="readme-images/add_client2.png" />
   
-    ## Listing clients :
+  ## Listing clients :
   
-    <img align="left" width="1000px" src="readme-images/list_clients1.png" />
+  <img align="left" width="1000px" src="readme-images/list_clients1.png" />
   
-    ## Deleting the second client :
+  ## Deleting the second client :
   
-    <img align="left" width="1000px" src="readme-images/delete_client2.png" />
+  <img align="left" width="1000px" src="readme-images/delete_client2.png" />
   
-    ## Adding a product to the database :
+  ## Adding a product to the database :
   
-    <img align="left" width="1000px" src="readme-images/add_product1.png" />
+  <img align="left" width="1000px" src="readme-images/add_product1.png" />
   
-    ## Listing products :
+  ## Listing products :
   
-    <img align="left" width="1000px" src="readme-images/list_products1.png" />
+  <img align="left" width="1000px" src="readme-images/list_products1.png" />
   
    ## Updating the product :
   
